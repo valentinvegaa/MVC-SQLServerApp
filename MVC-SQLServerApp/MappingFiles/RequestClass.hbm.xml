@@ -1,0 +1,14 @@
+﻿<!--
+Mapeo de la estructura de la base de datos asociada al modelo la clase RequestClass
+-->
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="MVC-SQLServerApp"
+                   namespace="MVC-SQLServerApp">
+  <class name="MVC_SQLServerApp.Models.RequestClass" table="requests">
+    <id name="id" column="id" type="int">
+      <generator class="identity"/>
+    </id>
+    <property name="request" type="string" column="request"/>
+  </class>
+</hibernate-mapping>

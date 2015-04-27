@@ -1,0 +1,47 @@
+﻿<!--
+Layout de la pagina de inicio
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title Prueba</title>
+</head>
+<body>
+    <div>
+        Hola Mundo ASP.Net<br> 
+        @ViewData["msgSalida"]
+    </div>
+    <div>
+        <h3>
+            Parte 1, Hola mundo
+        </h3>
+        <h2>
+            <br>
+            HOLA MUNDO ASP.NET
+        </h2>
+        <br>
+        <h3>
+            Parte 2, getRequest, putRequest, count
+        </h3>
+    </div>
+    <div>
+        <div>
+            @Html.ActionLink("Inicio", "Index", "")
+        </div>
+        <div>
+            <ul>
+                <li>@Html.ActionLink("getRequest", "getRequest", "Requests")</li>
+                <li>@Html.ActionLink("putRequest", "putRequest", "Requests")</li>
+                <li>@Html.ActionLink("count", "count", "Requests")</li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        @RenderSection("featured", required: false)
+        <section>
+            @RenderBody()
+        </section>
+    </div>
+</body>
+</html>

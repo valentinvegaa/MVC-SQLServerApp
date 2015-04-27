@@ -1,0 +1,29 @@
+﻿<!--
+Vista de la funcion putRequest.
+-->
+@model MVC_SQLServerApp.Models.RequestClass
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>putRequest</title>
+</head>
+<body>
+    <div>
+        @ViewData["putRequest"]
+        <br>
+        @using (Html.BeginForm()) { 
+            <p>Request:   @Html.TextBoxFor(m=>Model.request)</p>
+            <input type="submit" value="Put that Request!" />
+        }
+        @Html.ActionLink("Inicio", "Index", "")
+    </div>
+</body>
+</html>
+

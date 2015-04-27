@@ -1,0 +1,27 @@
+﻿<!--
+Vista de la funcion getRequest.
+-->
+@model MVC_SQLServerApp.Models.RequestClass
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>getRequest</title>
+</head>
+<body>
+    <div>
+        @ViewData["getRequest"]
+        <br>
+        @using (Html.BeginForm()) { 
+            <p>Request:   @Html.TextBoxFor(m=>Model.id)</p>
+            <input type="submit" value="Get that Request!" />
+        }
+        @Html.ActionLink("Inicio", "Index", "")
+    </div>
+</body>
+</html>
